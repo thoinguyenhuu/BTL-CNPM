@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom"
+import { createBrowserRouter } from 'react-router-dom'
 
 /*
  * Define public routes and private routes
@@ -8,24 +8,21 @@ import { createBrowserRouter } from "react-router-dom"
  * */
 
 // Common --------------------------------------------------------------------------
-import MainLayout from "../components/MainLayout.jsx";
-import PreLogin from "../pages/common/preLogin/PreLogin.jsx";
-import ProtectedRoute from "./ProtectedRoute.jsx";
-import Unauthorized from "../pages/common/unauthorized/Unauthorized.jsx";
-
+import MainLayout from '../components/MainLayout.jsx'
+import PreLogin from '../pages/common/preLogin/PreLogin.jsx'
+import ProtectedRoute from './ProtectedRoute.jsx'
+import Unauthorized from '../pages/common/unauthorized/Unauthorized.jsx'
 
 // Student --------------------------------------------------------------------------
-import MainStudentLayout from "../pages/student/MainStudentLayout.jsx";
-import LoginStudent from "../pages/student/login/LoginStudent.jsx";
-import HistoryAppointment from "@/pages/student/history/HistoryAppointment.jsx";
-import InnerAppointment from "@/pages/student/inner-appointment/InnerAppointment.jsx";
+import MainStudentLayout from '../pages/student/MainStudentLayout.jsx'
+import LoginStudent from '../pages/student/login/LoginStudent.jsx'
+import HistoryAppointment from '@/pages/student/history/HistoryAppointment.jsx'
+import InnerAppointment from '@/pages/student/inner-appointment/InnerAppointment.jsx'
 
 // Tutor ----------------------------------------------------------------------------
-import LoginTutor from "@/pages/tutor/login/LoginTutor.jsx";
-import ListAppointment from "@/pages/student/list-appointment/ListAppointment.jsx";
-import SearchCourse from "@/pages/student/search-course/SearchCourse.jsx";
-
-
+import LoginTutor from '@/pages/tutor/login/LoginTutor.jsx'
+import ListAppointment from '@/pages/student/list-appointment/ListAppointment.jsx'
+import SearchCourse from '@/pages/student/search-course/SearchCourse.jsx'
 
 export const router = createBrowserRouter([
     {
@@ -42,25 +39,29 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/student/login',
-                element: <LoginStudent />
+                element: <LoginStudent />,
             },
             {
                 path: '/tutor/login',
                 element: <LoginTutor />,
             },
-            { // Route private
+            {
+                // Route private
                 path: 'history',
-                element: <HistoryAppointment />
+                element: <HistoryAppointment />,
             },
-            { // Route private
+            {
+                // Route private
                 path: 'list-appointment/:id',
                 element: <InnerAppointment />,
             },
-            { // Route private
+            {
+                // Route private
                 path: 'list-appointment',
                 element: <ListAppointment />,
             },
-            { // Route private
+            {
+                // Route private
                 path: 'search-course',
                 element: <SearchCourse />,
             },
@@ -73,17 +74,12 @@ export const router = createBrowserRouter([
                     {
                         path: '/student',
                         element: <MainStudentLayout />,
-                        children: [
-
-                        ]
+                        children: [],
                     },
                     // tutor
-                    {
-
-                    }
-                ]
-            }
-        ]
-    }
+                    {},
+                ],
+            },
+        ],
+    },
 ])
-

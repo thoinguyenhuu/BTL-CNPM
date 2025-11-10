@@ -1,6 +1,6 @@
 import './PreLogin.scss'
 import logoBK from '@/assets/common/logoBK.svg'
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from 'react-router-dom'
 const PreLogin = () => {
     const navigate = useNavigate()
     return (

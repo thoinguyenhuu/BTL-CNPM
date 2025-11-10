@@ -4,10 +4,6 @@
 //      2.  role = 'tutor' --> return tutor
 //==================================================================================
 
-
-const useAuth = () => {
-
-}
-
+const useAuth = () => {}
 
 export default useAuth

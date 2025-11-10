@@ -1,6 +1,6 @@
 import './detailComponent.scss'
-import {useState} from "react";
-import FormChangeSchedule from "@/components/student/formChangeSchedule/formChangeSchedule.jsx";
+import { useState } from 'react'
+import FormChangeSchedule from '@/components/student/formChangeSchedule/formChangeSchedule.jsx'
 
 const DetailComponent = () => {
     const [showFormChangeSchedule, setShowFormChangeSchedule] = useState(false)
@@ -67,13 +67,20 @@ const DetailComponent = () => {
                         <td>Quán Cafe ABC Tầng 2</td>
                         <td>Sắp diễn ra</td>
                         <td>
-                            <button className="change-btn" onClick={() => setShowFormChangeSchedule(true)}>Thay đổi thời gian</button>
+                            <button
+                                className="change-btn"
+                                onClick={() => setShowFormChangeSchedule(true)}
+                            >
+                                Thay đổi thời gian
+                            </button>
                         </td>
                     </tr>
                 </tbody>
             </table>
 
-            {showFormChangeSchedule && <FormChangeSchedule setShowFormChangeSchedule={setShowFormChangeSchedule}/>}
+            {showFormChangeSchedule && (
+                <FormChangeSchedule setShowFormChangeSchedule={setShowFormChangeSchedule} />
+            )}
         </div>
     )
 }

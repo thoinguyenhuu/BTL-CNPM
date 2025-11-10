@@ -1,5 +1,5 @@
 import './LoginTutor.scss'
-import {ButtonLogin} from "@/components/common/ui/button/Button.jsx";
+import { ButtonLogin } from '@/components/common/ui/button/Button.jsx'
 
 const LoginTutor = () => {
     return (
@@ -8,14 +8,14 @@ const LoginTutor = () => {
                 <h1>Đăng nhập cho giảng viên</h1>
                 <p>Vui lòng điền đầy đủ thông tin đăng nhập</p>
 
-                <div className='input-container'>
+                <div className="input-container">
                     <label>Email giảng viên</label>
-                    <input placeholder='email@gmail.com'/>
+                    <input placeholder="email@gmail.com" />
                 </div>
 
-                <div className='input-container'>
+                <div className="input-container">
                     <label>Mật khẩu</label>
-                    <input placeholder='Mật khẩu' type='password' />
+                    <input placeholder="Mật khẩu" type="password" />
                 </div>
 
                 <ButtonLogin />
