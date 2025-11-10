@@ -1,8 +1,9 @@
 ## Run project
+
 1.  clone repo
-2. cd dir
-3. npm install
-4. npm run div
+2.  cd dir
+3.  npm install
+4.  npm run div
 
 ## Save Component Images
 
@@ -29,11 +30,13 @@ Add some **responsive styles**, for example:
 
 ```scss
 @include respond-to(sm) {
-  //login UI
+    //login UI
 }
 ```
+
 View detail in `'@/styles/mixin/reponsive.scss'`
 
 ## Fetch API
+
 A sample for fetch API using axios support loading and refresh
 Ex: `@/services/fetchAPI/...`

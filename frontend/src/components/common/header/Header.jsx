@@ -1,9 +1,9 @@
 import './Header.scss'
-import logo from '@/assets/common/logoBK.svg';
-import {useNavigate} from "react-router-dom";
+import logo from '@/assets/common/logoBK.svg'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
-    const navigate = useNavigate();
+    const navigate = useNavigate()
     return (
         <div className="header-container">
             <img src={logo} alt="logo" />
