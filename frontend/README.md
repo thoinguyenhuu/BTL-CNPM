@@ -3,9 +3,8 @@
 1.  clone repo
 2.  cd dir
 3.  npm install
-4.  npm run format
-5.  npm run div
-
+4.  npm run div
+Trước khi push lên github chạy lệnh `npm run format` để format code nha.
 ## Save Component Images
 
 Store all component-related images in the `assets` folder.
