@@ -17,6 +17,20 @@ const tutorService = {
             console.log('Error at loginTutorService', error)
             return null
         }
+    },
+    getAllTutorService: async() => {
+        try {
+            const tutors = await Tutor.find()
+                .populate({
+                    path: 'major_id',
+                    select: 'name'
+                })
+            if(!tutors) return null
+            return tutors
+        } catch (error) {
+            console.log('Error at get all tutor', error)
+            return null            
+        }
     }
 }
 

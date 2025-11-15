@@ -20,12 +20,12 @@ const TutorSchema = new mongoose.Schema({
         required: true
     },
     faculty_id: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "Faculty"
     },
     major_id: {
-        type: String,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: "Major"
     },
