@@ -18,14 +18,11 @@ import MainStudentLayout from '../pages/student/MainStudentLayout.jsx'
 import LoginStudent from '../pages/student/login/LoginStudent.jsx'
 import HistoryAppointment from '@/pages/student/history/HistoryAppointment.jsx'
 import InnerAppointment from '@/pages/student/inner-appointment/InnerAppointment.jsx'
-import ListAppointment from '@/pages/student/list-appointment/ListAppointment.jsx'
-import SearchCourse from '@/pages/student/search-course/SearchCourse.jsx'
 
 // Tutor ----------------------------------------------------------------------------
-import MainTutorLayout from '../pages/tutor/MainTutorLayout.jsx'
 import LoginTutor from '@/pages/tutor/login/LoginTutor.jsx'
-import ListSubjects from '@/pages/tutor/list-subjects/listSubjects.jsx'
-import SubjectDetails from '@/pages/tutor/list-subjects/subjectDetails/subjectDetails.jsx'
+import ListAppointment from '@/pages/student/list-appointment/ListAppointment.jsx'
+import SearchCourse from '@/pages/student/search-course/SearchCourse.jsx'
 
 export const router = createBrowserRouter([
     {
@@ -68,16 +65,8 @@ export const router = createBrowserRouter([
                 path: 'search-course',
                 element: <SearchCourse />,
             },
-            {
-                // Route private
-                path: 'list-subjects',
-                element: <ListSubjects />,
-            },
-            {
-                // Route private
-                path: 'subject-details',
-                element: <SubjectDetails />,
-            },
+            // others public routes
+            // ...
             {
                 element: <ProtectedRoute />,
                 children: [
@@ -87,11 +76,8 @@ export const router = createBrowserRouter([
                         element: <MainStudentLayout />,
                         children: [],
                     },
-                    {
-                        path: '/tutor',
-                        element: <MainTutorLayout />,
-                        children: [],
-                    },
+                    // tutor
+                    {},
                 ],
             },
         ],

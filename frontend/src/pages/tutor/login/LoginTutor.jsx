@@ -1,14 +1,7 @@
 import './LoginTutor.scss'
 import { ButtonLogin } from '@/components/common/ui/button/Button.jsx'
-import { useNavigate } from 'react-router-dom'
-
 
 const LoginTutor = () => {
-    const navigate = useNavigate()
-    const handleLoginTutor = () => {
-        //login
-        navigate('../list-subjects')
-    }
     return (
         <div className="form-login-container">
             <div className="box">
@@ -25,9 +18,7 @@ const LoginTutor = () => {
                     <input placeholder="Mật khẩu" type="password" />
                 </div>
 
-                <button className="btn-login" onClick={handleLoginTutor}>
-                    Login
-                </button>
+                <ButtonLogin />
             </div>
         </div>
     )
