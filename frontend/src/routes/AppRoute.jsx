@@ -12,13 +12,14 @@ import HistoryAppointment from '@/pages/student/history/HistoryAppointment.jsx'
 import InnerAppointment from '@/pages/student/inner-appointment/InnerAppointment.jsx'
 import ListAppointment from '@/pages/student/list-appointment/ListAppointment.jsx'
 import SearchCourse from '@/pages/student/search-course/SearchCourse.jsx'
+import ProfileStudent from '@/pages/student/profile/Profile.jsx'
 
 // Tutor ----------------------------------------------------------------------------
 import LoginTutor from '@/pages/tutor/login/LoginTutor.jsx'
 import ListSubjects from '@/pages/tutor/list-subjects/listSubjects.jsx'
 import SubjectDetails from '@/pages/tutor/list-subjects/subjectDetails/subjectDetails.jsx'
 import OpenClass from '@/pages/tutor/open-class/OpenClass.jsx'
-import ProfileStudent from '@/pages/student/profile/Profile.jsx'
+import ProfileTutor from '@/pages/tutor/profile/profileTutor.jsx'
 
 export const router = createBrowserRouter([
    {
@@ -64,6 +65,8 @@ export const router = createBrowserRouter([
                      { path: 'subject-details/:id', element: <SubjectDetails /> },
 
                      { path: 'open-class', element: <OpenClass /> },
+
+                     { path: 'profile', element: <ProfileTutor />}
                   ],
                },
             ],

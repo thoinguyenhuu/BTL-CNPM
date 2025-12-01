@@ -169,13 +169,59 @@ const DayDetailModal = ({ isOpen, onClose, date, events, onSave }) => {
             alert('Đã tạo lịch học thành công!')
             onSave()
          }
-      } catch (error) {
-         console.error('Lỗi tạo lịch:', error)
-         alert('Có lỗi xảy ra khi tạo lịch!')
-      } finally {
-         setLoading(false)
       }
+      
+      // Bước 2: Tính toán thời gian
+      const startTimeStr = `${newEvent.hour.toString().padStart(2, '0')}:${newEvent.minute.toString().padStart(2, '0')}`
+      let startH = parseInt(newEvent.hour)
+      let startM = parseInt(newEvent.minute)
+      let durH = parseInt(newEvent.durationHour || 0)
+      let durM = parseInt(newEvent.durationMinute || 0)
+      let totalStartMinutes = startH * 60 + startM
+      let totalDuration = durH * 60 + durM
+      let totalEndMinutes = totalStartMinutes + totalDuration
+      let endH = Math.floor(totalEndMinutes / 60) % 24
+      let endM = totalEndMinutes % 60
+      const endTimeStr = `${endH.toString().padStart(2, '0')}:${endM.toString().padStart(2, '0')}`
+      
+      // Format ngày gửi lên: YYYY-MM-DD
+      const isoDate = `${newEvent.year}-${newEvent.month.toString().padStart(2, '0')}-${newEvent.day.toString().padStart(2, '0')}`
+      
+      // Tạo chuỗi địa điểm
+      let locString = ''
+      if (newEvent.mode === 'online') {
+         locString = newEvent.link || 'Online Meeting'
+      } else {
+         const { room, building, campus } = newEvent.location
+         const parts = []
+         if (room) parts.push(room)
+         if (building) parts.push(building)
+         if (campus) parts.push(campus)
+         locString = parts.length > 0 ? parts.join(' - ') : 'Offline'
+      }
+      
+      // Bước 3: Tạo Slot (Lịch) với sessionId đã xác định
+      const slotPayload = {
+         session: sessionId,
+         start_time: startTimeStr,
+         end_time: endTimeStr,
+         location_or_link: locString,
+         date: isoDate,
+         duration: totalDuration,
+      }
+      const slotRes = await axios.post(`${BASE_API}/session-slot`, slotPayload)
+      
+      if (slotRes.data) {
+         alert('Đã tạo lịch học thành công!')
+         onSave() // Callback để reload lại lịch ở component cha
+      }
+   } catch (error) {
+      console.error('Lỗi tạo lịch:', error)
+      alert('Có lỗi xảy ra khi tạo lịch!')
+   } finally {
+      setLoading(false)
    }
+}
 
    if (!isOpen) return null
 
