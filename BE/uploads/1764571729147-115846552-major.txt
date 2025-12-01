@@ -1,0 +1,104 @@
+_id
+6918893048f8cffae6fe71f5
+name
+"Trí tuệ nhân tạo"
+_id
+691c80da433f43015572f65f
+name
+"Hóa hữu cơ"
+_id
+692c466d8fb4ce3d52d9fe4c
+name
+"Công nghệ phần mềm"
+_id
+692c466d8fb4ce3d52d9fe4d
+name
+"Kĩ thuật vật liệu"
+_id
+692c466d8fb4ce3d52d9fe4e
+name
+"Thuyết trình trước đám đông"
+_id
+692c466d8fb4ce3d52d9fe4f
+name
+"Khoa học dữ liệu"
+_id
+692c4b578fb4ce3d52d9fe6e
+name
+"Lập trình Web"
+_id
+692c4b578fb4ce3d52d9fe6f
+name
+"Mạng máy tính"
+_id
+692c4b578fb4ce3d52d9fe70
+name
+"An toàn thông tin"
+_id
+692c4b578fb4ce3d52d9fe71
+name
+"Hệ điều hành"
+_id
+692c4b578fb4ce3d52d9fe72
+name
+"Cấu trúc dữ liệu và giải thuật"
+_id
+692c4b578fb4ce3d52d9fe73
+name
+"Hệ quản trị cơ sở dữ liệu"
+_id
+692c4b578fb4ce3d52d9fe74
+name
+"Điện toán đám mây"
+_id
+692c4b578fb4ce3d52d9fe75
+name
+"Lập trình thiết bị di động"
+_id
+692c4b578fb4ce3d52d9fe76
+name
+"Đại số tuyến tính"
+_id
+692c4b578fb4ce3d52d9fe77
+name
+"Giải tích"
+_id
+692c4b578fb4ce3d52d9fe78
+name
+"Xác suất thống kê"
+_id
+692c4b578fb4ce3d52d9fe79
+name
+"Vật lý đại cương"
+_id
+692c4b578fb4ce3d52d9fe7a
+name
+"Tư duy thiết kế"
+_id
+692c4b578fb4ce3d52d9fe7b
+name
+"Kỹ năng giao tiếp"
+_id
+692c4b578fb4ce3d52d9fe7c
+name
+"Kỹ năng làm việc nhóm"
+_id
+692c4b578fb4ce3d52d9fe7d
+name
+"Quản trị dự án CNTT"
+_id
+692c4b578fb4ce3d52d9fe7e
+name
+"Marketing căn bản"
+_id
+692c4b578fb4ce3d52d9fe7f
+name
+"Logistics và Quản lý chuỗi cung ứng"
+_id
+692c4b578fb4ce3d52d9fe80
+name
+"Internet vạn vật (IoT)"
+_id
+692c4b578fb4ce3d52d9fe81
+name
+"Thị giác máy tính"

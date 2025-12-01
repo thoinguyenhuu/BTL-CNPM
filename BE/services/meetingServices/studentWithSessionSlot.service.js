@@ -168,7 +168,7 @@ const studentWithSessionSlotService = {
                 return null;
             }
             const response = await StudentWithSessionSlot.find({
-                session: sessionId,
+                slot: sessionId,
             })
                 .populate({
                     path: "student",
